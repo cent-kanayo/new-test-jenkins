@@ -29,8 +29,8 @@ pipeline{
             steps {
                 echo 'Testing..'
                 sh '''
-                    sudo docker build -t movieDB:latest .
-                    sudo docker tag moviedb:latest centkanayo10/react
+                    sudo docker build -t moviedb:latest .
+                    sudo docker tag moviedbs:latest centkanayo10/react
                     sudo docker logout
                     sodu docker login --username=centkanayo10 --password=Kanayo12.2
                     sudo docker push centkanayo10
