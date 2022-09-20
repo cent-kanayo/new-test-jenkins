@@ -12,6 +12,7 @@ pipeline{
                 sh '''
                     
                     sudo ssh -i /var/lib/jenkins/newserver.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-54-163-41-15.compute-1.amazonaws.com
+                    cd /var
                     sudo git init
                     sudo git remote add origin https://github.com/cent-kanayo/new-test-jenkins.git
                     sudo git pull origin main
