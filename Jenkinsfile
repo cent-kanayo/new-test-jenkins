@@ -48,7 +48,7 @@ pipeline{
             steps {
                 echo 'Deploying....'
                 sh '''
-                    sudo docker run -d -v -p 4040:80 --name html httpd
+                    sudo docker run -d -p 4040:80 --name html httpd
                 '''
             }
         }
