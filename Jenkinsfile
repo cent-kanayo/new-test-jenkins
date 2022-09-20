@@ -11,9 +11,9 @@ pipeline{
                 echo "running"
                 sh '''
                     
-                    sudo ssh -i /var/lib/jenkins/node.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-34-203-205-26.compute-1.amazonaws.com
+                    sudo ssh -i /var/lib/jenkins/node.pem -t -o StrictHostKeyChecking=no ubuntu@ec2-54-163-41-15.compute-1.amazonaws.com
                     sudo git init
-                    sudo git remote add origin https://$GITHUB_KEY_USR:$GITHUB_KEY_PSW@github.com/cent-kanayo/testjenkins.git
+                    sudo git remote add origin https://github.com/cent-kanayo/new-test-jenkins.git
                     sudo git pull origin main
                     sudo apt-get update
                     sudo apt-get install \
