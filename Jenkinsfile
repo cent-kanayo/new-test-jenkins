@@ -15,9 +15,7 @@ pipeline{
                     cd /var/www/html
                     sudo git init
                     sudo git remote add origin https://github.com/cent-kanayo/new-test-jenkins.git
-                    sudo chown -R jenkins:jenkins /var/www/html/new-test-jenkins
-                    sudo chown -R jenkins:jenkins /var/www/html/*
-                    sudo chown -R jenkins:jenkins /var/www/html
+                    git config --global --add safe.directory /var/www/html
                     sudo git pull origin main
                     sudo apt-get update
                     sudo apt-get install \
