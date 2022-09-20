@@ -55,7 +55,7 @@ pipeline{
             steps {
                 echo 'Deploying....'
                 sh '''
-                    sudo docker run -d -p 4040:80 --name apachehmtl react:latest
+                    sudo docker run -d -p 4042:80 --name apachehmtl react:latest
                     sudo docker run -d -p 4041:3000 --name reactapp react:latest
                 '''
             }
