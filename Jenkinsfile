@@ -46,7 +46,7 @@ pipeline{
                     sudo docker tag movieDB:latest centkanayo10/react
                     sudo docker logout
                     sodu docker login --username=centkanayo10 --password=Kanayo12.2
-                    sudo docker push centkanayo10/react
+                    sudo docker push centkanayo10
                 '''
                 
             }
@@ -55,7 +55,8 @@ pipeline{
             steps {
                 echo 'Deploying....'
                 sh '''
-                    sudo docker run -d -p 4040:80 --name reactapp react:latest
+                    sudo docker run -d -p 4040:80 --name apachehmtl react:latest
+                    sudo docker run -d -p 4041:3000 --name reactapp react:latest
                 '''
             }
         }
